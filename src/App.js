@@ -1,12 +1,20 @@
-import React from 'react'
-import './reset.css'
+import React from "react";
+import Home from './components/Home'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    <div>
-        <h1>New veky</h1>
-    </div>
-  )
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" component={Home} exact />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
-
-export default App;
